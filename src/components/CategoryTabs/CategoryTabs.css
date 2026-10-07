@@ -40,8 +40,19 @@
 }
 .category-tabs__tab.is-active .category-tabs__count { background: rgba(255, 255, 255, 0.18); }
 
-@media (max-width: 560px) {
-  .category-tabs { width: 100%; border-radius: var(--radius-lg); }
-  .category-tabs__tab { flex: 1 1 calc(50% - var(--space-2)); text-align: center; }
-  .category-tabs__pill { border-radius: var(--radius-md); }
+@media (max-width: 640px) {
+  /* Single horizontally scrollable row of pills on phones (no uneven wrapping). */
+  .category-tabs {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+  .category-tabs::-webkit-scrollbar { display: none; }
+  .category-tabs__tab { flex: 0 0 auto; white-space: nowrap; scroll-snap-align: start; }
 }

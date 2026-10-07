@@ -152,17 +152,19 @@
 .is-solid .theme-toggle { background: var(--color-secondary-soft); color: var(--color-primary); }
 
 /* Mobile menu */
+/* Rendered through a portal onto <body>: the header's backdrop-filter/transform would
+   otherwise become the containing block and shrink this fixed panel to the header's height. */
 .mobile-menu {
   position: fixed;
-  top: var(--header-h);
+  top: 72px; /* header is always in its solid (72px) state while the menu is open */
   left: 0; right: 0; bottom: 0;
+  z-index: 99;
   background: var(--color-bg);
   color: var(--color-text);
   overflow-y: auto;
   padding: var(--space-5) var(--gutter) var(--space-8);
   border-top: 1px solid var(--color-border);
 }
-.is-solid .mobile-menu { top: 72px; }
 .mobile-menu__list { display: flex; flex-direction: column; gap: var(--space-1); }
 .mobile-menu__row { display: flex; align-items: center; justify-content: space-between; }
 .mobile-menu__link {

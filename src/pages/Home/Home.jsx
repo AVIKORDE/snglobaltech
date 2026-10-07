@@ -62,7 +62,11 @@ function Hero() {
           animate="visible"
         >
           <motion.span className="hero__tag" variants={fadeUp}>
-            Quality <i aria-hidden="true">•</i> Reliability <i aria-hidden="true">•</i> Global Standards
+            <span>Quality</span>
+            <i aria-hidden="true">•</i>
+            <span>Reliability</span>
+            <i aria-hidden="true">•</i>
+            <span>Global Standards</span>
           </motion.span>
           <motion.h1 className="hero__title" variants={fadeUp}>
             Growing Quality.

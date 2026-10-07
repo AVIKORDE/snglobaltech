@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronDown, Menu, Moon, Sun, X } from 'lucide-react';
@@ -138,6 +139,8 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Portal: a fixed panel inside the header would be clipped by the header's backdrop-filter. */}
+      {createPortal(
       <AnimatePresence>
         {open && (
           <motion.div
@@ -213,7 +216,9 @@ export default function Header() {
             </motion.ul>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body,
+      )}
     </motion.header>
   );
 }

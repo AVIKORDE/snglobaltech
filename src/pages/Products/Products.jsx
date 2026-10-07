@@ -30,7 +30,7 @@ export default function Products() {
       { key: ALL, label: 'All Products', count: products.length },
       ...categories.map((c) => ({
         key: c.key,
-        label: c.label,
+        label: c.shortLabel,
         count: products.filter((p) => p.category === c.key).length,
       })),
     ],

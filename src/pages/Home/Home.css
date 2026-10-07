@@ -44,6 +44,8 @@
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }
+.hero__tag { flex-wrap: wrap; row-gap: 0.2rem; }
+.hero__tag span { white-space: nowrap; }
 .hero__tag i { color: var(--color-accent); font-style: normal; }
 .hero__title { font-size: var(--text-display); color: var(--color-on-primary); line-height: 1.02; }
 .hero__title-accent { color: var(--color-accent); }
@@ -354,6 +356,9 @@
   .hero__card--small { width: 48%; }
   .hero__actions .btn { width: 100%; }
   .why__grid { grid-template-columns: 1fr; }
-  .category-card__figure { width: 52%; }
+  /* The floating figure collides with the heading on narrow cards; the cover photo carries the card. */
+  .category-card__figure { display: none; }
+  .category-card--large { min-height: 360px; }
   .category-card__body { padding: var(--space-5); }
+  .hero__tag { font-size: 0.68rem; padding: 0.45rem 0.8rem; }
 }
