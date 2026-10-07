@@ -1,0 +1,88 @@
+/* ==========================================================================
+   SN Global Tech — Dark theme
+   Activated by <html data-theme="dark"> (see src/hooks/useTheme.js and the
+   pre-paint script in index.html). Light mode is untouched: every rule here
+   is scoped to the dark attribute.
+   ========================================================================== */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Brand greens used as TEXT / ICONS need to be lighter on dark surfaces. */
+  --color-primary: #6fbe85;
+  --color-primary-dark: #153620;      /* unchanged: hero / footer / text-on-gold */
+  --color-primary-light: #8fd0a2;
+  --color-secondary: #74b85f;
+  --color-secondary-soft: #1c3424;
+  --color-accent: #c9a24d;            /* gold reads well on dark, keep brand value */
+  --color-accent-soft: #3a3019;
+
+  /* Brand greens used as SURFACES keep the forest tones. Dark-only tokens. */
+  --color-brand-block: #1f4d2e;       /* large bands: page hero, primary sections */
+  --color-brand-solid: #2b6a3f;       /* controls: primary button, active tab, badges */
+  --color-brand-solid-hover: #31784a;
+
+  --color-bg: #101511;                /* warm, green-tinted near-black */
+  --color-bg-alt: #161d18;
+  --color-surface: #1a221c;
+  --color-surface-muted: #171e19;
+
+  --color-text: #ece9e1;              /* warm off-white, mirrors light bg tone */
+  --color-text-soft: #c6cbc4;
+  --color-muted: #949b92;
+  --color-border: #2a342c;
+  --color-border-strong: #3b473e;
+
+  --color-success: #6fc289;
+  --color-error: #e37b7b;
+  --color-on-primary: #f8f6f0;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+  --shadow-primary: 0 14px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Global ---------- */
+[data-theme='dark'] ::selection { background: #2b5a3a; color: var(--color-on-primary); }
+
+/* ---------- Header ---------- */
+[data-theme='dark'] .site-header.is-solid { background: rgba(16, 21, 17, 0.86); }
+
+/* ---------- Brand-green surfaces (keep forest tone, not the lightened text green) ---------- */
+[data-theme='dark'] .section--primary,
+[data-theme='dark'] .page-hero,
+[data-theme='dark'] .pd-aside-cta { background: var(--color-brand-block); }
+[data-theme='dark'] .about-what__media {
+  background: linear-gradient(160deg, var(--cat-accent, var(--color-brand-block)) 0%, var(--color-primary-dark) 100%);
+}
+
+/* ---------- Buttons ---------- */
+[data-theme='dark'] .btn--primary { --btn-bg: var(--color-brand-solid); }
+[data-theme='dark'] .btn--primary:hover { background: var(--color-brand-solid-hover); }
+[data-theme='dark'] .btn--outline:hover { --btn-bg: var(--color-brand-solid); --btn-border: var(--color-brand-solid); }
+[data-theme='dark'] .btn--ghost:hover { --btn-fg: var(--color-primary-light); }
+[data-theme='dark'] .btn--light { --btn-fg: var(--color-brand-block); }
+
+/* ---------- Badges ---------- */
+[data-theme='dark'] .badge--gold { color: #e6c87a; }
+[data-theme='dark'] .badge--dark { background: var(--color-brand-solid); }
+[data-theme='dark'] .badge--light { color: var(--color-brand-block); }
+
+/* ---------- Category tabs ---------- */
+[data-theme='dark'] .category-tabs__pill { background: var(--color-brand-solid); }
+[data-theme='dark'] .category-tabs__count { background: rgba(255, 255, 255, 0.08); }
+
+/* ---------- Product imagery ---------- */
+[data-theme='dark'] .product-image {
+  background:
+    radial-gradient(120% 90% at 50% 100%, rgba(111, 190, 133, 0.1), transparent 60%),
+    linear-gradient(180deg, #202a23 0%, #171e19 100%);
+}
+
+/* ---------- Forms ---------- */
+[data-theme='dark'] .form-field input::placeholder,
+[data-theme='dark'] .form-field textarea::placeholder { color: var(--color-muted); }
+[data-theme='dark'] .form-status--error { background: #33201f; border-color: #4d2c2c; }
+[data-theme='dark'] .form-status--success { color: var(--color-text); border-color: #2f4a37; }
+[data-theme='dark'] .form-status--success h3 { color: var(--color-primary); }

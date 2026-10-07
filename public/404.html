@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SN Global Tech</title>
+    <!--
+      GitHub Pages SPA fallback: redirect any deep link to index.html,
+      preserving the path in the query string so the app can restore it.
+    -->
+    <script>
+      var base = document.querySelector('base') ? document.querySelector('base').getAttribute('href') : '/';
+      var path = window.location.pathname.replace(/^\//, '');
+      sessionStorage.setItem('spa-redirect', '/' + path + window.location.search + window.location.hash);
+      window.location.replace(window.location.origin + (base === '/' ? '/' : base));
+    </script>
+  </head>
+  <body></body>
+</html>

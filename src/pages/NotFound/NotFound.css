@@ -1,0 +1,29 @@
+.not-found {
+  position: relative;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  padding-top: var(--header-h);
+  padding-bottom: var(--space-9);
+  overflow: hidden;
+}
+.not-found__blob { width: 500px; height: 500px; left: 50%; top: 20%; transform: translateX(-50%); background: rgba(90, 154, 70, 0.18); }
+.not-found__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  max-width: 620px;
+}
+.not-found__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 72px; height: 72px;
+  border-radius: 22px;
+  background: var(--color-secondary-soft);
+  color: var(--color-primary);
+}
+.not-found p { color: var(--color-text-soft); line-height: 1.75; }
+.not-found__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-3); }

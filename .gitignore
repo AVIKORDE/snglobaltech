@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# local secrets for `vercel dev`
+.env
+.env.*
+!.env.example
+.vercel

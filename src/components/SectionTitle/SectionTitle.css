@@ -1,0 +1,14 @@
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 680px;
+  margin-bottom: var(--space-7);
+}
+.section-title--center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+.section-title__heading { text-wrap: balance; }
+.section-title__lead { max-width: 60ch; }
