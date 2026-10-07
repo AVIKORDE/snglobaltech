@@ -82,3 +82,6 @@
 @media (max-width: 560px) {
   .site-footer__top { grid-template-columns: 1fr; gap: var(--space-6); }
 }
+
+.site-footer__address { display: flex; flex-direction: column; gap: 0.15rem; font-style: normal; line-height: 1.5; }
+.site-footer__address span:first-child { font-weight: 600; color: var(--color-on-primary); }

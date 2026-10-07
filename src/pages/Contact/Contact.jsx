@@ -29,8 +29,13 @@ export default function Contact() {
       title: 'Call or WhatsApp',
       lines: [
         { label: contact.phonePrimaryLabel, value: contact.phonePrimary, href: tel(contact.phonePrimary), extra: wa(contact.phonePrimary) },
-        { label: contact.phoneSecondaryLabel, value: contact.phoneSecondary, href: tel(contact.phoneSecondary), extra: wa(contact.phoneSecondary) },
-      ],
+        contact.phoneSecondary && {
+          label: contact.phoneSecondaryLabel,
+          value: contact.phoneSecondary,
+          href: tel(contact.phoneSecondary),
+          extra: wa(contact.phoneSecondary),
+        },
+      ].filter(Boolean),
     },
     {
       icon: Mail,
@@ -40,7 +45,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Address',
-      lines: [{ label: contact.city, value: contact.address }],
+      lines: [{ label: contact.legalName, value: contact.addressLines.join(', ') }],
     },
   ];
 
@@ -59,10 +64,10 @@ export default function Contact() {
           <div className="contact__info">
             <Reveal>
               <span className="eyebrow">Reach us directly</span>
-              <h2 className="contact__heading">Two specialist desks, one team.</h2>
+              <h2 className="contact__heading">Reach us directly, any time.</h2>
               <p className="contact__intro">
-                Agri commodities and agri inputs are handled by dedicated export-import specialists. Reach the right desk
-                below, or use the form and we will route your inquiry.
+                Call or WhatsApp us for fresh fruits, agri inputs, herbal extracts or cereals, or send the form and our
+                export team will get back to you.
               </p>
             </Reveal>
 

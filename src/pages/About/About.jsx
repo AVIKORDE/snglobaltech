@@ -75,7 +75,7 @@ export default function About() {
               </p>
               <p>
                 Our products are processed and packed in advanced facilities, ensuring international quality, purity and
-                consistency. Dedicated export-import specialists support buyers across both portfolios.
+                consistency. Our export-import team supports buyers across both portfolios.
               </p>
             </Reveal>
           </div>

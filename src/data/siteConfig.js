@@ -14,15 +14,23 @@ export const siteConfig = {
   logo: '/images/site/logo.webp',
 
   contact: {
-    // Agri Inputs desk (from the Agricultural Input Portfolio brochure)
     phonePrimary: '+91 80074 49345',
-    phonePrimaryLabel: 'Export-Import Specialist | Agri Inputs',
-    // Agri Commodities desk (from the product catalogue)
-    phoneSecondary: '+91 95523 82305',
-    phoneSecondaryLabel: 'Mr. Dnyaneshwar Shirsat — Export-Import Specialist | Agri Commodities',
+    phonePrimaryLabel: 'SN Globaltech',
+    // Optional second line. Leave empty ('') to hide it everywhere.
+    phoneSecondary: '',
+    phoneSecondaryLabel: '',
     email: 'eximsnenterprises@gmail.com',
-    address: '[Company Address]',
-    city: 'India',
+    legalName: 'S. N. Globaltech',
+    // Multi-line postal address. Each item renders on its own line.
+    addressLines: [
+      'At Post Bahaduri, H/N 411, Shivnirmal Nivas',
+      'Bahaduri-Tisgaon Road, Tal Chandwad',
+      'Dist Nashik, Maharashtra 422205',
+      'India',
+    ],
+    // Single-line version used in the footer.
+    address: 'At Post Bahaduri, H/N 411, Shivnirmal Nivas, Bahaduri-Tisgaon Road, Tal Chandwad, Dist Nashik',
+    city: 'Maharashtra 422205, India',
     hours: 'Mon – Sat, 10:00 – 18:00 IST',
   },
 

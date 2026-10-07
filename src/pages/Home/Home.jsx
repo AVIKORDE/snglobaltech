@@ -40,7 +40,7 @@ const reasons = [
   {
     icon: Users,
     title: 'Professional Service',
-    text: 'Dedicated export-import specialists for agri commodities and agri inputs, reachable by call, WhatsApp or email.',
+    text: 'A dedicated export-import team for agri commodities and agri inputs, reachable by call, WhatsApp or email.',
   },
 ];
 

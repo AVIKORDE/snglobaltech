@@ -74,19 +74,24 @@ export default function Footer() {
               <Phone size={16} aria-hidden="true" />
               <a href={`tel:${contact.phonePrimary.replace(/\s/g, '')}`}>{contact.phonePrimary}</a>
             </li>
-            <li>
-              <Phone size={16} aria-hidden="true" />
-              <a href={`tel:${contact.phoneSecondary.replace(/\s/g, '')}`}>{contact.phoneSecondary}</a>
-            </li>
+            {contact.phoneSecondary && (
+              <li>
+                <Phone size={16} aria-hidden="true" />
+                <a href={`tel:${contact.phoneSecondary.replace(/\s/g, '')}`}>{contact.phoneSecondary}</a>
+              </li>
+            )}
             <li>
               <Mail size={16} aria-hidden="true" />
               <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </li>
             <li>
               <MapPin size={16} aria-hidden="true" />
-              <span>
-                {contact.address}, {contact.city}
-              </span>
+              <address className="site-footer__address">
+                {contact.legalName && <span>{contact.legalName}</span>}
+                {contact.addressLines.map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </address>
             </li>
           </ul>
         </div>
