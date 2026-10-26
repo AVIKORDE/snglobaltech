@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Compass, Eye, Globe2, Handshake, Leaf, PackageCheck, ShieldCheck, Sprout, Target } from 'lucide-react';
+import { Compass, Globe2, Handshake, Leaf, PackageCheck, ShieldCheck, Sprout } from 'lucide-react';
 import PageHero from '../../components/PageHero/PageHero';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import Reveal from '../../components/Reveal/Reveal';
@@ -148,25 +148,33 @@ export default function About() {
       <section className="section section--primary about-mv">
         <div className="container about-mv__grid">
           <Reveal className="about-mv__card">
-            <span className="about-mv__icon">
-              <Target size={26} aria-hidden="true" />
-            </span>
-            <span className="eyebrow">Our mission</span>
-            <h2>Deliver nature&rsquo;s purity to the world.</h2>
-            <p>
-              To connect global markets with quality agricultural products through responsible sourcing, professional
-              trade practices and dependable business partnerships.
-            </p>
-          </Reveal>
-          <Reveal className="about-mv__card" delay={0.1}>
-            <span className="about-mv__icon">
-              <Eye size={26} aria-hidden="true" />
-            </span>
+            <img
+              className="about-mv__image"
+              src="/images/site/vision.png"
+              alt="Vision"
+              loading="lazy"
+              decoding="async"
+            />
             <span className="eyebrow">Our vision</span>
             <h2>A trusted bridge between Indian agriculture and global markets.</h2>
             <p>
               To build a respected international trade company that connects agricultural products with markets around
               the world and contributes to a more sustainable future.
+            </p>
+          </Reveal>
+          <Reveal className="about-mv__card" delay={0.1}>
+            <img
+              className="about-mv__image"
+              src="/images/site/mission.png"
+              alt="Mission"
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="eyebrow">Our mission</span>
+            <h2>Deliver nature&rsquo;s purity to the world.</h2>
+            <p>
+              To connect global markets through responsible sourcing, professional trade practices and dependable
+              business partnerships.
             </p>
           </Reveal>
         </div>

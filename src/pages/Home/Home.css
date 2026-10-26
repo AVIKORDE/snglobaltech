@@ -163,9 +163,10 @@
   background: var(--color-primary-dark);
   color: var(--color-on-primary);
   box-shadow: var(--shadow-md);
+  aspect-ratio: 1;
 }
-.category-card--large { min-height: 460px; }
-.category-card--small { min-height: 280px; }
+.category-card--large,
+.category-card--small { min-height: 0; }
 .category-card__link { position: relative; display: block; height: 100%; }
 .category-card__media { position: absolute; inset: 0; }
 .category-card__media img {
@@ -346,7 +347,6 @@
   .about-preview__media > img { aspect-ratio: 4 / 3; }
   .quality__media > img:first-child { aspect-ratio: 4 / 3; }
   .categories__grid { grid-template-columns: 1fr; }
-  .category-card--large { min-height: 400px; }
   .featured__head { flex-direction: column; align-items: flex-start; }
   .cta-band__card { flex-direction: column; align-items: flex-start; }
 }
@@ -358,7 +358,6 @@
   .why__grid { grid-template-columns: 1fr; }
   /* The floating figure collides with the heading on narrow cards; the cover photo carries the card. */
   .category-card__figure { display: none; }
-  .category-card--large { min-height: 360px; }
   .category-card__body { padding: var(--space-5); }
   .hero__tag { font-size: 0.68rem; padding: 0.45rem 0.8rem; }
 }

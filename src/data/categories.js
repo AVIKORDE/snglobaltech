@@ -5,8 +5,8 @@
 export const categories = [
   {
     key: 'fruits',
-    label: 'Fruits',
-    shortLabel: 'Fruits',
+    label: 'Fresh Fruits',
+    shortLabel: 'Fresh Fruits',
     tagline: 'Fresh produce for international markets',
     description:
       'We facilitate the trade of fresh produce for international markets, with a focus on product quality, suitable handling and export requirements.',
@@ -16,8 +16,8 @@ export const categories = [
   },
   {
     key: 'pesticides',
-    label: 'Agricultural Inputs',
-    shortLabel: 'Agri Inputs',
+    label: 'Agriculture Inputs',
+    shortLabel: 'Agriculture Inputs',
     tagline: 'Pesticides, fertilizers & plant nutrition',
     description:
       'We trade pesticides, crop protection products, fertilizers and plant nutrition solutions that support modern farming and crop productivity.',
@@ -27,8 +27,8 @@ export const categories = [
   },
   {
     key: 'herbal-extracts',
-    label: 'Herbal Extracts & Nutritional Products',
-    shortLabel: 'Herbal Extracts',
+    label: 'Herbal Extract Powders',
+    shortLabel: 'Herbal Extract Powders',
     tagline: 'Plant-derived ingredients for global buyers',
     description:
       'We offer herbal extract powders and nutritional powders for buyers seeking plant-derived ingredients and value-added agricultural products.',
@@ -38,7 +38,7 @@ export const categories = [
   },
   {
     key: 'grains',
-    label: 'Cereals & Grains',
+    label: 'Cereals and Grains',
     shortLabel: 'Cereals & Grains',
     tagline: 'Cereal grains for international markets',
     description:

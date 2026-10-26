@@ -99,14 +99,12 @@
   background: rgba(248, 246, 240, 0.06);
   border: 1px solid rgba(248, 246, 240, 0.12);
 }
-.about-mv__icon {
-  display: inline-grid;
-  place-items: center;
-  width: 56px; height: 56px;
-  border-radius: 16px;
-  background: var(--color-accent);
-  color: var(--color-primary-dark);
-  margin-bottom: var(--space-2);
+.about-mv__image {
+  display: block;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 auto var(--space-2);
 }
 .about-mv__card h2 { font-size: var(--text-h3); font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.9rem); }
 .about-mv__card p { color: rgba(248, 246, 240, 0.8); line-height: 1.75; }
