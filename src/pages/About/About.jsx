@@ -12,31 +12,31 @@ import './About.css';
 const approach = [
   {
     icon: Sprout,
-    title: 'Sustainable sourcing',
-    text: 'Products are sourced from sustainably managed farms across India, with ethical sourcing as a standing commitment.',
+    title: 'Trust and transparency',
+    text: 'Open communication, clear commercial expectations and professional conduct are central to lasting trade partnerships.',
   },
   {
     icon: ShieldCheck,
-    title: 'Advanced processing',
-    text: 'Processing and packing takes place in advanced facilities with hygienic handling to protect purity and consistency.',
+    title: 'Quality and compliance',
+    text: 'We value suitable product specifications, responsible supplier coordination and applicable regulatory requirements.',
   },
   {
     icon: PackageCheck,
-    title: 'Custom packaging',
-    text: 'Bulk drums, IBC tanks, jumbo bags, retail packs and private labelling, matched to each buyer and market.',
+    title: 'Responsible agricultural trade',
+    text: 'We recognize the importance of sustainable farming, efficient resource use and responsible sourcing.',
   },
   {
     icon: Globe2,
-    title: 'Export-ready',
-    text: 'Quality aligned with international quality and safety standards so shipments meet the demands of global markets.',
+    title: 'Long-term partnerships',
+    text: 'We build enduring business relationships around shared objectives, dependable coordination and mutual growth.',
   },
 ];
 
 const values = [
-  { icon: Leaf, title: 'Purity', text: '100% natural and organic products, with no additives, preservatives or artificial colours in our extract powders.' },
-  { icon: ShieldCheck, title: 'Quality', text: 'International quality and safety standards guide how we source, process and pack.' },
-  { icon: Handshake, title: 'Partnership', text: 'We build long-term relationships with distributors and importers through customised, private-label solutions.' },
-  { icon: Compass, title: 'Responsibility', text: 'Sustainable and ethical sourcing that respects farmers, soil and the environment.' },
+  { icon: Handshake, title: 'Trust', text: 'Open communication, clear expectations and professional conduct guide our business relationships.' },
+  { icon: ShieldCheck, title: 'Compliance', text: 'We recognize the importance of documentation, applicable regulations and destination-market requirements.' },
+  { icon: Leaf, title: 'Responsible trade', text: 'We support responsible farming practices and sustainable use of natural resources.' },
+  { icon: Compass, title: 'Shared growth', text: 'We aim to create lasting value through dependable coordination and long-term partnerships.' },
 ];
 
 export default function About() {
@@ -50,8 +50,8 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About SN Global Tech"
-        title="Rooted in Indian farms. Trusted in global markets."
-        lead="We supply pure, organic, and export-ready products sourced from sustainably managed farms across India, processed and packed in advanced facilities to meet the demands of global markets."
+        title="Connecting agricultural products with global markets."
+        lead="SN GlobalTech is an international export-import company working across agricultural inputs, fresh fruits, herbal extracts, nutritional products, cereals and grains."
         image="/images/hero/corn-seedlings.webp"
         crumbs={[{ label: 'About Us' }]}
       />
@@ -69,13 +69,12 @@ export default function About() {
             />
             <Reveal className="about-intro__text">
               <p>
-                SN Global Tech brings together two complementary portfolios under one standard of quality: agri commodities,
-                covering fresh fruits, herbal extract powders and cereals, and agri inputs, covering botanical crop protection,
-                plant nutrition, soil conditioners and growing media.
+                Established in 2019, SN GlobalTech began with a shared vision among four individuals with experience in
+                agricultural inputs, fresh fruits, cereals and grains, and herbal extract powders and nutritional products.
               </p>
               <p>
-                Our products are processed and packed in advanced facilities, ensuring international quality, purity and
-                consistency. Our export-import team supports buyers across both portfolios.
+                We bring these areas of experience together to connect agricultural products with international markets
+                and build lasting relationships with customers and suppliers.
               </p>
             </Reveal>
           </div>
@@ -88,7 +87,7 @@ export default function About() {
           <SectionTitle
             eyebrow="What we do"
             title="Four product lines, one supply partner."
-            lead="Everything we supply is drawn from our product catalogues and can be packed to bulk, retail or private-label requirements."
+            lead="We support international sourcing and supply across four areas of agricultural trade."
             align="center"
           />
           <motion.ul
@@ -119,8 +118,8 @@ export default function About() {
         <div className="container about-approach__inner">
           <SectionTitle
             eyebrow="Our approach"
-            title="From farm to port, with care at every step."
-            lead="A straightforward process that keeps quality visible from sourcing to final packing."
+            title="A professional approach to international trade."
+            lead="Clear communication, commercial understanding and careful coordination support every business relationship."
           />
           <motion.ol
             className="about-approach__steps"
@@ -155,8 +154,8 @@ export default function About() {
             <span className="eyebrow">Our mission</span>
             <h2>Deliver nature&rsquo;s purity to the world.</h2>
             <p>
-              To supply pure, organic and export-ready agricultural products, processed and packed to international
-              standards, so that buyers anywhere can rely on consistent quality from Indian farms.
+              To connect global markets with quality agricultural products through responsible sourcing, professional
+              trade practices and dependable business partnerships.
             </p>
           </Reveal>
           <Reveal className="about-mv__card" delay={0.1}>
@@ -166,8 +165,8 @@ export default function About() {
             <span className="eyebrow">Our vision</span>
             <h2>A trusted bridge between Indian agriculture and global markets.</h2>
             <p>
-              To be the partner of choice for importers and distributors seeking sustainable, ethically sourced produce,
-              extracts and agricultural inputs.
+              To build a respected international trade company that connects agricultural products with markets around
+              the world and contributes to a more sustainable future.
             </p>
           </Reveal>
         </div>

@@ -110,6 +110,12 @@
   transform: translateY(0);
   transition-delay: 0s;
 }
+.has-dropdown.is-dismissed .site-nav__dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+}
 .site-nav__dropdown-link {
   display: block;
   padding: 0.65rem 0.9rem;

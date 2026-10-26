@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, BadgeCheck, Handshake, Leaf, PackageCheck, ShieldCheck, Sprout, Truck, Users } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BadgeCheck, Handshake, Leaf, ShieldCheck, Sprout, Truck, Users } from 'lucide-react';
 import Button from '../../components/Button/Button';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import ProductCard from '../../components/ProductCard/ProductCard';
@@ -12,35 +12,34 @@ import { useSeo } from '../../hooks/useSeo';
 import { EASE, fadeUp, imageReveal, stagger } from '../../animations/variants';
 import './Home.css';
 
-/* Strengths listed on the back page of the company catalogue. */
+/* Company values from the supplied business details. */
 const strengths = [
-  { icon: Leaf, label: '100% Natural & Organic Products' },
-  { icon: ShieldCheck, label: 'International Quality & Safety Standards' },
-  { icon: BadgeCheck, label: 'Advanced Processing & Hygienic Handling' },
-  { icon: PackageCheck, label: 'Custom Packaging Solutions' },
-  { icon: Sprout, label: 'Sustainable & Ethical Sourcing' },
+  { icon: Handshake, label: 'Trust and transparency' },
+  { icon: ShieldCheck, label: 'Quality and compliance' },
+  { icon: Sprout, label: 'Responsible agricultural trade' },
+  { icon: BadgeCheck, label: 'Long-term partnerships' },
 ];
 
 const reasons = [
   {
     icon: ShieldCheck,
-    title: 'Quality Focus',
-    text: 'Products processed and packed in advanced facilities to deliver international quality, purity and consistency.',
+    title: 'Extensive Trade Experience',
+    text: 'Our management team brings more than 15 years of experience in international trade and cross-border business operations.',
   },
   {
     icon: Truck,
-    title: 'Reliable Supply',
-    text: 'Export-ready produce and inputs with bulk, retail and custom packing options to suit your market.',
+    title: 'International Market Exposure',
+    text: 'Our team has gained business exposure across more than 70 countries and a broad range of international markets.',
   },
   {
     icon: Handshake,
-    title: 'Customer Commitment',
-    text: 'Private labelling and customised formulations developed around your crop, soil and regulatory needs.',
+    title: 'Diverse Agricultural Portfolio',
+    text: 'Our portfolio spans agricultural inputs, fresh fruits, herbal extracts, nutritional products, cereals and grains.',
   },
   {
     icon: Users,
-    title: 'Professional Service',
-    text: 'A dedicated export-import team for agri commodities and agri inputs, reachable by call, WhatsApp or email.',
+    title: 'Professional Trade Approach',
+    text: 'We value clear communication, careful coordination and attention to the requirements of international transactions.',
   },
 ];
 
@@ -66,7 +65,7 @@ function Hero() {
             <i aria-hidden="true">•</i>
             <span>Reliability</span>
             <i aria-hidden="true">•</i>
-            <span>Global Standards</span>
+            <span>International Trade</span>
           </motion.span>
           <motion.h1 className="hero__title" variants={fadeUp}>
             Growing Quality.
@@ -74,9 +73,8 @@ function Hero() {
             <span className="hero__title-accent">Delivering Trust.</span>
           </motion.h1>
           <motion.p className="hero__lead" variants={fadeUp}>
-            SN Global Tech supplies pure, organic and export-ready fresh fruits, herbal extract powders, cereals and
-            crop-protection inputs sourced from sustainably managed farms across India, processed and packed to
-            international standards.
+            SN GlobalTech connects agricultural producers, quality products and global markets through agricultural
+            inputs, fresh fruits, herbal extracts, nutritional products, cereals and grains.
           </motion.p>
           <motion.div className="hero__actions" variants={fadeUp}>
             <Button to="/products" size="lg">
@@ -130,14 +128,14 @@ function AboutPreview() {
           <img src="/images/hero/corn-seedlings.webp" alt="Young maize seedlings growing in rich soil" loading="lazy" decoding="async" />
           <div className="about-preview__media-card">
             <Leaf size={22} aria-hidden="true" />
-            <p>Sourced from sustainably managed farms across India</p>
+            <p>International market exposure across more than 70 countries</p>
           </div>
         </Reveal>
         <div className="about-preview__content">
           <SectionTitle
             eyebrow="About SN Global Tech"
             title="Nature's purity, delivered worldwide."
-            lead="We supply pure, organic, and export-ready herbal extract powders, fresh fruits, cereals and agricultural inputs sourced from sustainably managed farms across India. Our products are processed and packed in advanced facilities, ensuring international quality, purity, and consistency to meet the demands of global markets."
+            lead="Established in 2019, SN GlobalTech brings together four founders with experience across agricultural inputs, fresh fruits, cereals and grains, and herbal extract powders."
           />
           <Reveal>
             <Button to="/about" variant="outline">
@@ -187,8 +185,8 @@ function Categories() {
       <div className="container">
         <SectionTitle
           eyebrow="What we supply"
-          title="Two core categories, one standard of quality."
-          lead="From orchard-fresh fruit to crop protection and plant nutrition, every product is sourced, processed and packed for international markets."
+          title="Four product lines, one supply partner."
+          lead="We connect agricultural products with international markets through responsible trade and lasting business relationships."
           align="center"
         />
         <div className="categories__grid">
@@ -267,9 +265,9 @@ function QualitySection() {
       <div className="container quality__inner">
         <div className="quality__content">
           <SectionTitle
-            eyebrow="Our standard"
-            title="Processed and packed for global markets."
-            lead="Every product passes through advanced facilities with hygienic handling, ensuring international quality, purity and consistency, whether it ships as fresh fruit, extract powder, cereal or crop input."
+            eyebrow="Our approach"
+            title="Responsible trade. Lasting partnerships."
+            lead="We emphasize clear communication, commercial understanding, careful coordination and awareness of export-import requirements."
           />
           <Reveal as="ul" className="quality__list">
             {strengths.map(({ icon: Icon, label }) => (

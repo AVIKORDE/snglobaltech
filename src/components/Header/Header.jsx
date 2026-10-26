@@ -34,6 +34,7 @@ export default function Header() {
   const scrolled = useScrolled(20);
   const [open, setOpen] = useState(false);
   const [mobileSub, setMobileSub] = useState(false);
+  const [productsDismissed, setProductsDismissed] = useState(false);
   const location = useLocation();
   const reduce = useReducedMotion();
   const { isDark, toggleTheme } = useTheme();
@@ -76,7 +77,11 @@ export default function Header() {
         <nav className="site-nav" aria-label="Primary">
           <ul className="site-nav__list">
             {navLinks.map((link) => (
-              <li key={link.to} className={`site-nav__item ${link.children ? 'has-dropdown' : ''}`}>
+              <li
+                key={link.to}
+                className={`site-nav__item ${link.children ? 'has-dropdown' : ''} ${link.children && productsDismissed ? 'is-dismissed' : ''}`}
+                onMouseEnter={() => setProductsDismissed(false)}
+              >
                 <NavLink
                   to={link.to}
                   end={link.to === '/'}
@@ -90,7 +95,11 @@ export default function Header() {
                   <ul className="site-nav__dropdown">
                     {link.children.map((child) => (
                       <li key={child.to}>
-                        <Link to={child.to} className="site-nav__dropdown-link">
+                        <Link
+                          to={child.to}
+                          className="site-nav__dropdown-link"
+                          onClick={() => setProductsDismissed(true)}
+                        >
                           {child.label}
                         </Link>
                       </li>

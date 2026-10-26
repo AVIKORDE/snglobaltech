@@ -10,11 +10,11 @@ export const siteConfig = {
   shortName: 'SN Global Tech',
   tagline: "Nature's Purity, Delivered Worldwide",
   description:
-    'SN Global Tech supplies pure, organic and export-ready fresh fruits, herbal extract powders, cereals and agricultural inputs sourced from sustainably managed farms across India.',
+    'SN GlobalTech connects agricultural producers, quality products and global markets through agricultural inputs, fresh fruits, herbal extracts, nutritional products, cereals and grains.',
   logo: '/images/site/logo.webp',
 
   contact: {
-    phonePrimary: '+91 80074 49345',
+    phonePrimary: '+91 72181 94401',
     phonePrimaryLabel: 'SN Globaltech',
     // Optional second line. Leave empty ('') to hide it everywhere.
     phoneSecondary: '',

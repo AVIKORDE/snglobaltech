@@ -16,7 +16,8 @@
  *    packaging: [],     // "Supply Option"
  *  }
  *
- * Images: /public/images/products/<slug>.webp (extracted from the catalogue).
+ * Images: catalogue extracts in /public/images/products and supplied photos
+ * in /public/images/provided/products.
  * Agri-input products have no photos in the brochure, so they use generated
  * placeholders in /public/images/products/placeholders/<slug>.svg —
  * replace the `image` path to swap in a real photo.
@@ -24,6 +25,45 @@
 
 const img = (slug) => `/images/products/${slug}.webp`;
 const placeholder = (slug) => `/images/products/placeholders/${slug}.svg`;
+const suppliedImages = {
+  mango: 'mango.webp',
+  grape: 'grape.webp',
+  pomegranate: 'pomegranate.webp',
+  banana: 'banana.webp',
+  guava: 'guava.webp',
+  apple: 'apple.jpg',
+  citrus: 'citrus.jpg',
+  'dragon-fruit': 'dragon-fruit.webp',
+  'neem-pesticide': 'neem-pesticide.jpg',
+  'cold-press-neem-oil': 'cold-press-neem-oil.jpg',
+  'sulphur-80-wdg-wp': 'sulphur-80-wdg-wp.webp',
+  'sulphur-99': 'sulphur-99.webp',
+  'silicon-spreader': 'silicon-spreader.jpeg',
+  'humic-acid': 'humic-acid.jpg',
+  'amino-acid': 'amino-acid.jpeg',
+  'fulvic-acid-powder': 'fulvic-acid-powder.jpg',
+  'green-seaweed': 'green-seaweed.avif',
+  'boron-20': 'boron-20.jpg',
+  'organic-granules': 'organic-granules.jpg',
+  'edta-chelated-micronutrients': 'edta-chelated-micronutrients.jpg',
+  'amino-chelated-micronutrients': 'amino-chelated-micronutrients.jpg',
+  cocopeat: 'cocopeat.webp',
+  'customized-product': 'customized-product.jpg',
+  'turmeric-extract-powder': 'turmeric-extract-powder.jpeg',
+  'moringa-leaf-extract-powder': 'moringa-leaf-extract-powder.png',
+  'amla-extract-powder': 'amla-extract-powder.png',
+  'garlic-extract-powder': 'garlic-extract-powder.jpeg',
+  'white-onion-extract-powder': 'white-onion-extract-powder.png',
+  'red-onion-extract-powder': 'red-onion-extract-powder.jpeg',
+  'orange-extract-powder': 'orange-extract-powder.jpg',
+  'banana-extract-powder': 'banana-extract-powder.jpeg',
+  'rice-extract-powder': 'rice-extract-powder.png',
+  'red-chili-extract-powder': 'red-chili-extract-powder.png',
+  rice: 'rice.jpg',
+  wheat: 'wheat.webp',
+  soybean: 'soybean.jpeg',
+  maize: 'maize.png',
+};
 
 /* ----------------------------------------------------------------------------
    FRESH FRUITS  (category: fruits)
@@ -763,6 +803,7 @@ const grains = [
 
 export const products = [...fruits, ...agriInputs, ...herbalExtracts, ...grains].map((p) => ({
   ...p,
+  image: suppliedImages[p.slug] ? `/images/provided/products/${suppliedImages[p.slug]}` : p.image,
   imageAlt: p.imageAlt || `${p.name} - ${p.type}`,
 }));
 
